@@ -16,8 +16,12 @@ body {
   color: #000000;
 }
 
-.time {
+#time {
   font-size: 8rem;
+}
+
+#date {
+  font-size: 3rem;
 }
 
 h1 {
@@ -29,8 +33,111 @@ h2 {
   opacity: 0.8;
 }
 
+button {
+  margin: 0 auto;
+  padding: 15px 40px 15px 47px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  background: #00AFDB;
+  color: white;
+  border: 0;
+}
+
+button:hover {
+  filter: grayscale(.8);
+  cursor: pointer;
+}
+
+button:active,
+button:focus {
+  outline: 0;
+}
+
+button:active{
+  transform: scale(1.02)
+}
+
+.quote {
+  width: 650px;
+  height: 200px;
+  font: 1.2rem Georgia, serif;
+  margin: 0;
+  background: white;
+  opacity: 0.5;
+  padding: 1em;
+  border-radius: 1em;
+  color: #000000;
+}
+
+.quote figcaption,
+.quote blockquote {
+  margin: 1em;
+}
+
+.quote figcaption {
+  text-align: right;
+}
+
+.city {  
+  width: 100px;
+  padding: 10px 0;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.temperature {    
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.weather-icon {
+  font-size: 5vw;
+  color: #44aadd;
+}
+.weather-icon:hover {
+  animation: shake 1.5s;
+}
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+}
+
 @media (max-width: 700px) {
-  .time {
+  #time {
     font-size: 6rem;
+  }
+
+  #date {
+    font-size: 2rem;
+  }
+
+  .quote {
+    width: 450px;
+  }
+}
+
+@media (max-width: 320px) {
+  body {
+    height: 970px;
+  }
+
+  #time {
+    font-size: 3rem;
+  }
+
+  #date {
+    font-size: 1rem;
+  }
+
+  .quote {
+    width: 225px;
+    height: 570px;
   }
 }
